@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Click_Brick" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGK-Ox-yMo" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rest of screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-jd-upY">
+                                <rect key="frame" x="0.0" y="580" width="600" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0cu-wH-JT3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tqJ-jd-upY" firstAttribute="height" secondItem="HGK-Ox-yMo" secondAttribute="height" id="3oJ-a3-dq3"/>
+                            <constraint firstAttribute="trailing" secondItem="HGK-Ox-yMo" secondAttribute="trailing" id="AdH-Oi-wKK"/>
+                            <constraint firstItem="HGK-Ox-yMo" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="MnS-Sb-MX0"/>
+                            <constraint firstAttribute="trailing" secondItem="tqJ-jd-upY" secondAttribute="trailing" id="QgF-XN-CBh"/>
+                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="tqJ-jd-upY" secondAttribute="bottom" id="Tqn-ji-Mep"/>
+                            <constraint firstItem="tqJ-jd-upY" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" id="dxl-iT-Scd"/>
+                            <constraint firstItem="HGK-Ox-yMo" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="gWb-r9-t4w"/>
+                            <constraint firstItem="tqJ-jd-upY" firstAttribute="top" secondItem="HGK-Ox-yMo" secondAttribute="bottom" id="xQZ-tE-9zI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3oJ-a3-dq3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="skView" destination="HGK-Ox-yMo" id="eE5-Yk-df8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270" y="294"/>
+        </scene>
+    </scenes>
+</document>
