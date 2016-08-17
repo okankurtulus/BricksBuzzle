@@ -14,6 +14,9 @@ struct EntityCategory {
 
 class GameScene: SKScene {
     
+    var checkLevelCompete : Bool = false
+    var isClearing = false
+    
     let applauseAction = SKAction.playSoundFileNamed("applause.mp3", waitForCompletion: false)
     let successAction = SKAction.playSoundFileNamed("success.mp3", waitForCompletion: false)
     let fitAction = SKAction.playSoundFileNamed("fit.mp3", waitForCompletion: false)
@@ -24,6 +27,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         physicsWorld.contactDelegate = self
+        self.delegate = self
         
         let counterNodeHeight : CGFloat = 35
         counterNode = CounterNode()        
@@ -33,41 +37,37 @@ class GameScene: SKScene {
     }
     
     func fillBricks() {
+        let level = GameStatsModel.sharedInstance.gameLevel
+        self.scene?.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0),
+                                                toPoint: CGPointMake((self.scene?.size.width)!, 0))
+        
         self.counterNode?.reset()
         let size = self.size
         let columnCount = 10
         
         let width : CGFloat = size.width / CGFloat(columnCount)
         let height = width
-        let rowCount = Int( size.height / height)
+        let rowCount = Int( size.height / height) - 1
         
-        
-        //let texture = SKTexture(imageNamed: "square_mask")
         let brickSize = CGSizeMake(width, height)
-        
-        
-        let level = GameStatsModel.sharedInstance.gameLevel
+        let texture = SKTexture(imageNamed: "square_mask")
         
         for j in 0..<rowCount {
-            for i in 0..<columnCount {
-                
-                let brick = BrickNode(rectOfSize: brickSize, cornerRadius: brickSize.width / 5 )
-                brick.fillColor = ColorModel().randomColor(level + 1)
+            for i in 0..<columnCount {                
+                let color = ColorModel().randomColor(level + 1)
+                let brick = BrickNode(color: color, size: brickSize)
                 
                 brick.initPhysicsBody()
+                let maskNode = SKSpriteNode(texture: texture, color: UIColor.clearColor(), size: brickSize)
+                brick.addChild(maskNode)
                 
-                brick.antialiased = false
-                brick.lineWidth = 3
-                brick.strokeColor = self.backgroundColor
-                
+                brick.physicsBody?.categoryBitMask = EntityCategory.BrickNode
+                brick.physicsBody?.contactTestBitMask = EntityCategory.BrickNode
                 
                 let locationX = CGFloat(i) * width + (width / 2)
                 let locationY = CGFloat(j) * height + (height / 2)
                 let shiftY = size.height + (CGFloat(i+j) * height)
                 brick.position = CGPointMake(locationX, locationY + shiftY)
-                
-                brick.physicsBody?.categoryBitMask = EntityCategory.BrickNode
-                brick.physicsBody?.contactTestBitMask = EntityCategory.BrickNode
                 
                 self.addChild(brick)
                 self.counterNode?.addPoints(1)
@@ -91,6 +91,7 @@ class GameScene: SKScene {
                         self.counterNode?.addPoints(-1)
                     }
                     self.runAction(successAction)
+                    checkLevelCompete = true
                 }
             }
             
@@ -98,13 +99,14 @@ class GameScene: SKScene {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        //self.checkIfCompleted()
     }
     
-    func helpUser(){
-        print("Inserting bricks...")
-        removeRemainingNodes()
-        self.fillBricks()
+    func helpUser() {
+        if(!isClearing) {
+            print("Inserting bricks...")
+            removeRemainingNodes()
+            self.fillBricks()
+        }
     }
     
     func checkIfCompleted() {
@@ -137,21 +139,31 @@ class GameScene: SKScene {
     }
     
     func clearScene() {
-        let waitAction = SKAction.waitForDuration(0.5)
-        let hideAction = SKAction.fadeAlphaTo(0, duration: 1)
-        let showAction = SKAction.fadeAlphaTo(1, duration: 0.5)
-        let clearAction = SKAction.runBlock({
-            [unowned self] in
-            self.removeRemainingNodes()
+        if (!isClearing) {
+            isClearing = true
+            let waitAction = SKAction.waitForDuration(1)
+            
+            let letGoAction = SKAction.runBlock({
+                self.scene?.physicsBody = nil
             })
-        
-        let fillBricksAction = SKAction.runBlock({
-            [unowned self] in
-            self.fillBricks()
-        })
-        
-        
-        self.runAction(SKAction.sequence([waitAction, hideAction, clearAction, showAction, fillBricksAction]))
+            
+            let clearAction = SKAction.runBlock({
+                [unowned self] in
+                self.removeRemainingNodes()
+                })
+            
+            let fillBricksAction = SKAction.runBlock({
+                [unowned self] in
+                self.fillBricks()
+                })
+            
+            let clearingFalseAction = SKAction.runBlock({
+                [unowned self] in
+                self.isClearing = false
+            })
+            
+            self.runAction(SKAction.sequence([waitAction, letGoAction, waitAction, clearAction, fillBricksAction, clearingFalseAction]))
+        }
     }
     
     func removeRemainingNodes() {
@@ -162,6 +174,7 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+    
 }
 
 extension GameScene : SKPhysicsContactDelegate {
@@ -171,6 +184,15 @@ extension GameScene : SKPhysicsContactDelegate {
             runAction(fitAction)
         }
     }
-    
 }
 
+extension GameScene : SKSceneDelegate {
+    func didEvaluateActionsForScene(scene: SKScene) {
+        //print("didEvaluateActionsForScene")
+        if(checkLevelCompete) {
+            checkLevelCompete = false
+            checkIfCompleted()
+        }
+    }
+    
+}

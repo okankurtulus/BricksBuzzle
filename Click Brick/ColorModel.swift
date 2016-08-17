@@ -16,17 +16,15 @@ class ColorModel: BaseModel {
                   UIColor.yellowColor(),
                   UIColor.greenColor(),
                   UIColor.blueColor(),
-                  UIColor.brownColor(),
-                  UIColor.cyanColor(),
-                  UIColor.darkGrayColor(),
+                  UIColor.orangeColor(),
                   UIColor.magentaColor(),
-                  UIColor.orangeColor()
+                  UIColor.cyanColor(),
+                  UIColor.brownColor(),
                   ]
     
     func randomColor(mod : Int =  Int(INT_MAX) ) -> UIColor {
-        let random = Int(arc4random_uniform(UInt32(1000)))
-        let index = random % colors.count
-        return colors[index % mod]
+        let random = Int(arc4random_uniform(UInt32(colors.count)))        
+        return colors[random % mod]
     }    
     
 }

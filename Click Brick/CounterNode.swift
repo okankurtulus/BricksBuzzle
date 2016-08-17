@@ -28,6 +28,7 @@ class CounterNode: SKNode {
         
         levelLabelNode.color = UIColor.whiteColor()
         levelLabelNode.fontSize = 25
+        
         levelLabelNode.position = CGPointMake(200, 0)
         self.addChild(levelLabelNode)
     }
@@ -44,6 +45,15 @@ class CounterNode: SKNode {
             SKAction.scaleTo(1, duration: 0.1)
             ]))
         levelLabelNode.text = "Level \(GameStatsModel.sharedInstance.gameLevel)"
+        fixPositions()
+    }
+    
+    func fixPositions() {
+        if let s = scene {
+            let x = s.size.width / 2 - levelLabelNode.frame.width / 2
+            levelLabelNode.position = CGPointMake(x, 0)
+            levelLabelNode.horizontalAlignmentMode = .Center
+        }
     }
     
     func reset() {

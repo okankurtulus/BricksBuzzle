@@ -51,10 +51,9 @@ class GameViewController: UIViewController {
         if let scene : GameScene = GameScene(size: skView.frame.size) {
             // Configure the view.
             //let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            skView.showsPhysics = true
-            
+            //skView.showsFPS = true
+            //skView.showsNodeCount = true
+            //skView.showsPhysics = true // Creates memory leak, so be carefull while open!
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -64,8 +63,7 @@ class GameViewController: UIViewController {
             
             scene.backgroundColor = UIColor.blackColor()
 
-            scene.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0),
-                                              toPoint: CGPointMake(skView.frame.size.width, 0))
+            //scene.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0), toPoint: CGPointMake(skView.frame.size.width, 0))
             
             
             skView.presentScene(scene)

@@ -8,46 +8,8 @@
 
 import SpriteKit
 
-class BrickNode: SKShapeNode {
+class BrickNode: SKSpriteNode {
     static let NAME = "BrickNode"
-    
-    /*
-    init(texture: SKTexture?, color: UIColor, size: CGSize) {
-        self.size = size
-        self.color = color
-        
-        let cornerRadius : CGFloat = 30
-        let padding : CGFloat = 5
-        let rect = CGRectMake(0, 0, size.width - padding, size.height - padding)
-        super.init(rect: rect, cornerRadius: cornerRadius)
-        
-        self.name = BrickNode.NAME
-        
-        //let block = SKSpriteNode(texture: nil, color: color, size: size)
-        //block.position = CGPointMake(0, 0)
-        //self.addChild(block)
-        
-        //let node = SKSpriteNode(texture: texture, color: UIColor.clearColor(), size: size)
-        //node.position = CGPointMake(0, 0)
-        //self.addChild(node)
-        
-        
-        
-        self.lineWidth = 0
-        self.fillColor = color
-        self.antialiased = true
-        
-     
-        
-    }*/
-    
-    override init() {
-        super.init()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     func initPhysicsBody()  {
         let size = self.frame.size
@@ -56,8 +18,7 @@ class BrickNode: SKShapeNode {
         phsicsBody.mass = 2
         phsicsBody.allowsRotation = false
         phsicsBody.restitution = 0.1
-        
-        phsicsBody.friction = 0
+        phsicsBody.friction = 0.3
         
         phsicsBody.dynamic = true
         phsicsBody.usesPreciseCollisionDetection = false
@@ -99,7 +60,7 @@ class BrickNode: SKShapeNode {
     }
     
     func isSame(brick : BrickNode?) -> BrickNode? {
-        return (brick != nil && brick!.fillColor == self.fillColor) ? brick : nil;
+        return (brick != nil && brick!.color == self.color) ? brick : nil;
     }
     
     //MARK - Navigation
