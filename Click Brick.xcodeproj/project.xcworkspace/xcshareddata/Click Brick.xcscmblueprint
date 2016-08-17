@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6ED3C064CE983E4A6DB4DDF00384B98D7D8F5187",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9E19DBC69CD0CD3198B5DAB89AF8F1A36804DB29" : 0,
+    "6ED3C064CE983E4A6DB4DDF00384B98D7D8F5187" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FB736F12-561E-4049-9BC8-44FF59D8AAC8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9E19DBC69CD0CD3198B5DAB89AF8F1A36804DB29" : "BabyPuzzle\/",
+    "6ED3C064CE983E4A6DB4DDF00384B98D7D8F5187" : "Click%20Brick\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Click Brick",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Click Brick.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/okankurtulus\/BricksBuzzle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6ED3C064CE983E4A6DB4DDF00384B98D7D8F5187"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/okankurtulus\/BabyPuzzle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E19DBC69CD0CD3198B5DAB89AF8F1A36804DB29"
+    }
+  ]
+}
