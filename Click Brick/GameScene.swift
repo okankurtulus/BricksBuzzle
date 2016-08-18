@@ -12,36 +12,38 @@ struct EntityCategory {
     static let BrickNode : UInt32 = 1 << 0
 }
 
+protocol GameSceneHUDDelegate {
+    func resetCounter(level : Int)
+    func addPoints(score : Int)
+    func nextLevel()
+}
+
 class GameScene: SKScene {
     
     var checkLevelCompete : Bool = false
     var isClearing = false
+    var level : Int = 0
     
     let applauseAction = SKAction.playSoundFileNamed("applause.mp3", waitForCompletion: false)
     let successAction = SKAction.playSoundFileNamed("success.mp3", waitForCompletion: false)
     let fitAction = SKAction.playSoundFileNamed("fit.mp3", waitForCompletion: false)
     let failAction = SKAction.playSoundFileNamed("fail.mp3", waitForCompletion: true)
     
-    var counterNode : CounterNode? = nil;
+    var hudDelegate: GameSceneHUDDelegate? = nil
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         physicsWorld.contactDelegate = self
         self.delegate = self
-        
-        let counterNodeHeight : CGFloat = 35
-        counterNode = CounterNode()        
-        counterNode?.position = CGPointMake( counterNodeHeight, self.size.height - counterNodeHeight)
-        counterNode?.zPosition = 50
-        self.addChild(counterNode!)
+
     }
     
     func fillBricks() {
-        let level = GameStatsModel.sharedInstance.gameLevel
         self.scene?.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0),
                                                 toPoint: CGPointMake((self.scene?.size.width)!, 0))
         
-        self.counterNode?.reset()
+        self.level = GameStatsModel.sharedInstance.gameLevel + GameStatsModel.sharedInstance.gameOffset
+        self.hudDelegate?.resetCounter(level)
         let size = self.size
         let columnCount = 10
         
@@ -54,7 +56,7 @@ class GameScene: SKScene {
         
         for j in 0..<rowCount {
             for i in 0..<columnCount {                
-                let color = ColorModel().randomColor(level + 1)
+                let color = ColorModel().randomColor(self.level + 1)
                 let brick = BrickNode(color: color, size: brickSize)
                 
                 brick.initPhysicsBody()
@@ -70,7 +72,7 @@ class GameScene: SKScene {
                 brick.position = CGPointMake(locationX, locationY + shiftY)
                 
                 self.addChild(brick)
-                self.counterNode?.addPoints(1)
+                self.hudDelegate?.addPoints(1)
             }
         }
     }
@@ -88,7 +90,7 @@ class GameScene: SKScene {
                 if (bricksToRemove.count > 1) {
                     for brick in bricksToRemove {
                         brick.removeFromParent()
-                        self.counterNode?.addPoints(-1)
+                        self.hudDelegate?.addPoints(-1)
                     }
                     self.runAction(successAction)
                     checkLevelCompete = true
@@ -101,18 +103,10 @@ class GameScene: SKScene {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
     }
     
-    func helpUser() {
-        if(!isClearing) {
-            print("Inserting bricks...")
-            removeRemainingNodes()
-            self.fillBricks()
-        }
-    }
-    
     func checkIfCompleted() {
         var remainingBrickCount = 0
         var isBrickExistsToExplode = false
-        if(self.children.count > 0) {
+        if(self.children.count >= 0) {
             for node in self.children {
                 if let brickNode = node as? BrickNode {
                     if(brickNode.hasSameNeighbour()) {
@@ -124,10 +118,9 @@ class GameScene: SKScene {
             }
             let isCompleted = !isBrickExistsToExplode
             
-            
             if(isCompleted && remainingBrickCount == 0) {
                 print("Finished with success")
-                GameStatsModel.sharedInstance.nexLevel()
+                self.hudDelegate?.nextLevel()
                 runAction(applauseAction)
                 clearScene()
             } else if(isCompleted) {
@@ -138,10 +131,22 @@ class GameScene: SKScene {
         }
     }
     
+    func resetScene() {
+        self.scene?.physicsBody = nil
+        
+        let waitAction = SKAction.waitForDuration(1)
+        let clearAction = SKAction.runBlock({
+            [unowned self] in
+            self.removeRemainingNodes()
+            self.fillBricks()
+            })
+        runAction(SKAction.sequence([waitAction, clearAction]))
+    }
+    
     func clearScene() {
         if (!isClearing) {
             isClearing = true
-            let waitAction = SKAction.waitForDuration(1)
+            let waitAction = SKAction.waitForDuration(0.8)
             
             let letGoAction = SKAction.runBlock({
                 self.scene?.physicsBody = nil
@@ -167,8 +172,24 @@ class GameScene: SKScene {
     }
     
     func removeRemainingNodes() {
-        self.children.forEach({ (node : SKNode) in if (node is BrickNode) { node.removeFromParent()} })
-        self.counterNode?.reset()
+        self.children.forEach({
+            (node : SKNode) in
+            if (node is BrickNode) {
+                if(!scene!.frame.contains(node.position)) {
+                    node.removeFromParent()
+                } else {
+                    node.physicsBody?.collisionBitMask = 0
+                    node.physicsBody?.categoryBitMask = 0
+                    node.runAction(SKAction.sequence([
+                        SKAction.waitForDuration(1),
+                        SKAction.runBlock({
+                            [unowned self] in
+                            self.removeFromParent()
+                        })
+                    ]))
+                }
+            }
+        })
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -179,7 +200,6 @@ class GameScene: SKScene {
 
 extension GameScene : SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
-        
         if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode) {
             runAction(fitAction)
         }
@@ -188,7 +208,6 @@ extension GameScene : SKPhysicsContactDelegate {
 
 extension GameScene : SKSceneDelegate {
     func didEvaluateActionsForScene(scene: SKScene) {
-        //print("didEvaluateActionsForScene")
         if(checkLevelCompete) {
             checkLevelCompete = false
             checkIfCompleted()

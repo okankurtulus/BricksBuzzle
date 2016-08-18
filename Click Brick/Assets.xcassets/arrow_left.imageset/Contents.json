@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "arrow_left-1.png",
       "scale" : "1x"
     },
     {
@@ -10,7 +11,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "replay.png",
+      "filename" : "arrow_left.png",
       "scale" : "3x"
     }
   ],

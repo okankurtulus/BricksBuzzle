@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		B118F68D1D6343480058D9FF /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B118F68C1D6343480058D9FF /* success.mp3 */; };
 		B1607F541D63964B00E0263B /* GameStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1607F531D63964B00E0263B /* GameStatsModel.swift */; };
-		B1607F5A1D639DB200E0263B /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1607F591D639DB200E0263B /* fail.mp3 */; };
 		B187FA121D63459A00234AA5 /* fit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B187FA111D63459A00234AA5 /* fit.mp3 */; };
-		B187FA141D63483C00234AA5 /* CounterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B187FA131D63483C00234AA5 /* CounterNode.swift */; };
 		B1B3212F1D5C5D5B00488D68 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3212E1D5C5D5B00488D68 /* ColorModel.swift */; };
 		B1B321311D5C5D6E00488D68 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B321301D5C5D6E00488D68 /* BaseModel.swift */; };
 		B1B4DB071D5478D400420A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4DB061D5478D400420A47 /* AppDelegate.swift */; };
-		B1B4DB091D5478D400420A47 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B1B4DB081D5478D400420A47 /* GameScene.sks */; };
 		B1B4DB0B1D5478D400420A47 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4DB0A1D5478D400420A47 /* GameScene.swift */; };
 		B1B4DB0D1D5478D400420A47 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4DB0C1D5478D400420A47 /* GameViewController.swift */; };
 		B1B4DB101D5478D400420A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1B4DB0E1D5478D400420A47 /* Main.storyboard */; };
@@ -24,6 +21,7 @@
 		B1B4DB201D5478D400420A47 /* Click_BrickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4DB1F1D5478D400420A47 /* Click_BrickUITests.swift */; };
 		B1B4DB2C1D547E7700420A47 /* BrickNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4DB2B1D547E7700420A47 /* BrickNode.swift */; };
 		B1D3A99E1D61ECC300AAA781 /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1D3A99D1D61ECC300AAA781 /* applause.mp3 */; };
+		B1DE7B541D65E06800B81E1B /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1DE7B531D65E06800B81E1B /* fail.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +37,11 @@
 /* Begin PBXFileReference section */
 		B118F68C1D6343480058D9FF /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
 		B1607F531D63964B00E0263B /* GameStatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModel.swift; sourceTree = "<group>"; };
-		B1607F591D639DB200E0263B /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
 		B187FA111D63459A00234AA5 /* fit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fit.mp3; sourceTree = "<group>"; };
-		B187FA131D63483C00234AA5 /* CounterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterNode.swift; sourceTree = "<group>"; };
 		B1B3212E1D5C5D5B00488D68 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
 		B1B321301D5C5D6E00488D68 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		B1B4DB031D5478D300420A47 /* Click Brick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Click Brick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B4DB061D5478D400420A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1B4DB081D5478D400420A47 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		B1B4DB0A1D5478D400420A47 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B1B4DB0C1D5478D400420A47 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B1B4DB0F1D5478D400420A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +53,7 @@
 		B1B4DB211D5478D400420A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1B4DB2B1D547E7700420A47 /* BrickNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickNode.swift; sourceTree = "<group>"; };
 		B1D3A99D1D61ECC300AAA781 /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause.mp3; sourceTree = "<group>"; };
+		B1DE7B531D65E06800B81E1B /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +108,6 @@
 				B1F74FF91D61836F005423BE /* App */,
 				B1B3212D1D5C5D4B00488D68 /* Model */,
 				B1B4DB2A1D547E5D00420A47 /* SpriteNode */,
-				B1B4DB081D5478D400420A47 /* GameScene.sks */,
 				B1B4DB0A1D5478D400420A47 /* GameScene.swift */,
 				B1B4DB0C1D5478D400420A47 /* GameViewController.swift */,
 				B1B4DB0E1D5478D400420A47 /* Main.storyboard */,
@@ -134,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				B1B4DB2B1D547E7700420A47 /* BrickNode.swift */,
-				B187FA131D63483C00234AA5 /* CounterNode.swift */,
 			);
 			name = SpriteNode;
 			sourceTree = "<group>";
@@ -153,7 +147,7 @@
 		B1F74FFA1D618861005423BE /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				B1607F591D639DB200E0263B /* fail.mp3 */,
+				B1DE7B531D65E06800B81E1B /* fail.mp3 */,
 				B187FA111D63459A00234AA5 /* fit.mp3 */,
 				B118F68C1D6343480058D9FF /* success.mp3 */,
 				B1D3A99D1D61ECC300AAA781 /* applause.mp3 */,
@@ -211,6 +205,7 @@
 				TargetAttributes = {
 					B1B4DB021D5478D300420A47 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8V9FEAB5WD;
 					};
 					B1B4DB1A1D5478D400420A47 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -242,10 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B4DB091D5478D400420A47 /* GameScene.sks in Resources */,
 				B187FA121D63459A00234AA5 /* fit.mp3 in Resources */,
-				B1607F5A1D639DB200E0263B /* fail.mp3 in Resources */,
 				B1B4DB151D5478D400420A47 /* LaunchScreen.storyboard in Resources */,
+				B1DE7B541D65E06800B81E1B /* fail.mp3 in Resources */,
 				B1D3A99E1D61ECC300AAA781 /* applause.mp3 in Resources */,
 				B1B4DB121D5478D400420A47 /* Assets.xcassets in Resources */,
 				B118F68D1D6343480058D9FF /* success.mp3 in Resources */,
@@ -270,7 +264,6 @@
 				B1B321311D5C5D6E00488D68 /* BaseModel.swift in Sources */,
 				B1607F541D63964B00E0263B /* GameStatsModel.swift in Sources */,
 				B1B4DB0B1D5478D400420A47 /* GameScene.swift in Sources */,
-				B187FA141D63483C00234AA5 /* CounterNode.swift in Sources */,
 				B1B4DB0D1D5478D400420A47 /* GameViewController.swift in Sources */,
 				B1B4DB071D5478D400420A47 /* AppDelegate.swift in Sources */,
 				B1B4DB2C1D547E7700420A47 /* BrickNode.swift in Sources */,
@@ -405,9 +398,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Click Brick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "okankurtulus.Click-Brick";
+				PRODUCT_BUNDLE_IDENTIFIER = com.okn.brick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -416,10 +410,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Click Brick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "okankurtulus.Click-Brick";
+				PRODUCT_BUNDLE_IDENTIFIER = com.okn.brick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fbb9beb5-619c-458c-a319-3983b5cadd8e";
 			};
 			name = Release;
 		};
