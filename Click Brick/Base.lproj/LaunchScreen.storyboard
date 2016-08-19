@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,15 +14,56 @@
                         <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="Baq-63-sRT">
+                                <rect key="frame" x="10" y="90" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Baq-63-sRT" secondAttribute="height" multiplier="1:1" id="mcf-5j-I7U"/>
+                                    <constraint firstAttribute="width" constant="300" id="rfC-k8-9Kn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Brick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1P-UA-MlM">
+                                <rect key="frame" x="10" y="390" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Iye-kR-Q0I"/>
+                                    <constraint firstAttribute="width" secondItem="x1P-UA-MlM" secondAttribute="height" multiplier="6:1" id="Vt9-Gp-R3Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Vt9-Gp-R3Y"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Baq-63-sRT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6jD-gZ-mMh"/>
+                            <constraint firstItem="x1P-UA-MlM" firstAttribute="leading" secondItem="Baq-63-sRT" secondAttribute="leading" id="F4g-Rp-Rfz"/>
+                            <constraint firstItem="x1P-UA-MlM" firstAttribute="top" secondItem="Baq-63-sRT" secondAttribute="bottom" id="U5M-0D-zvy"/>
+                            <constraint firstItem="Baq-63-sRT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eAv-tN-0Jb"/>
+                            <constraint firstItem="x1P-UA-MlM" firstAttribute="width" secondItem="Baq-63-sRT" secondAttribute="width" id="ik3-oc-fLS"/>
+                            <constraint firstItem="x1P-UA-MlM" firstAttribute="trailing" secondItem="Baq-63-sRT" secondAttribute="trailing" id="y4g-kH-Ekz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ik3-oc-fLS"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iTunesArtwork" width="512" height="512"/>
+    </resources>
 </document>
