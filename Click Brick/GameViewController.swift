@@ -10,6 +10,20 @@ import UIKit
 import SpriteKit
 import GoogleMobileAds
 
+//MARK - ByPass Print for Prod
+func print(items: Any..., separator: String = " ", terminator: String = "\n") {
+    #if DEBUG
+        var idx = items.startIndex
+        let endIdx = items.endIndex
+        
+        repeat {
+            Swift.print(items[idx], separator: separator, terminator: idx == (endIdx - 1) ? terminator : separator)
+            idx += 1
+        }
+            while idx < endIdx
+    #endif
+}
+
 class GameViewController: UIViewController {
 
     @IBOutlet var skView : SKView!
@@ -29,6 +43,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.blackColor()
         self.scoreLabel?.text = ""
         self.levelLabel?.text = ""
         self.previousLevelButton?.hidden = true
@@ -41,11 +56,13 @@ class GameViewController: UIViewController {
         initGameScene()
         refreshLevel()
         
-        self.initBanner()
-        if(interstitial == nil || !interstitial.isReady) {
-            self.initInterstitial()
-        }
-        
+        #if DEBUG
+        #else
+            self.initBanner()
+            if(interstitial == nil || !interstitial.isReady) {
+                self.initInterstitial()
+            }
+        #endif
     }
     
     override func shouldAutorotate() -> Bool {
@@ -72,8 +89,8 @@ class GameViewController: UIViewController {
     func initGameScene() {
         if let scene : GameScene = GameScene(size: skView.frame.size) {
             #if DEBUG
-                skView.showsFPS = true
-                skView.showsPhysics = true // Creates memory leak, so be carefull while open!
+                //skView.showsFPS = true
+                //skView.showsPhysics = true // Creates memory leak, so be carefull while open!
             #endif
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
@@ -82,7 +99,7 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFit
             scene.hudDelegate = self
             
-            scene.backgroundColor = UIColor.blackColor()
+            //scene.backgroundColor = UIColor.blackColor()
             skView.presentScene(scene)
         }
     }

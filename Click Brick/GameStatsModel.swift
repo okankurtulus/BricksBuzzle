@@ -21,7 +21,7 @@ class GameStatsModel: BaseModel {
     override private init() {
         gameLevel = max(1, defaults.integerForKey(gameLevelKey))
         #if DEBUG
-        //    gameOffset = (Int(arc4random_uniform(UInt32(1000))) % 10)
+            gameLevel = (Int(arc4random_uniform(UInt32(1000))) % 4)
         #endif
     }
     
