@@ -95,10 +95,17 @@ class GameViewController: UIViewController {
         BDGShare.sharedBDGShare().shareUsingActivityController(shareText, urlStr: urlText)
     }
     
+    var resetButtonPressedTime = 0
     @IBAction func help(sender : UIButton) {
+        resetButtonPressedTime += 1
         rotate(sender)
-        let gameScene = skView.scene as! GameScene
-        gameScene.resetScene()
+        
+        if(resetButtonPressedTime % 15 == 0 && interstitial.isReady) {
+            interstitial.presentFromRootViewController(self)
+        } else {
+            let gameScene = skView.scene as! GameScene
+            gameScene.resetScene()
+        }
     }
     
     @IBAction func nextLevel(sender : UIButton) {
