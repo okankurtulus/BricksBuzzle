@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    func initFireBase() {
+        FIRApp.configure()
+    }
+    
+    func initiRate() {
+        #if DEBUG
+            iRate.sharedInstance().daysUntilPrompt = 0
+            iRate.sharedInstance().usesUntilPrompt = 0
+        #else
+            iRate.sharedInstance().daysUntilPrompt = 5
+            iRate.sharedInstance().usesUntilPrompt = 10
+        #endif
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        initFireBase()
+        initiRate()
         return true
     }
 

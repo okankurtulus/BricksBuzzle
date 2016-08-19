@@ -11,7 +11,6 @@ import Foundation
 
 class GameStatsModel: BaseModel {
     static let sharedInstance = GameStatsModel()
-    //private init() {} //This prevents others from using the default '()' initializer for this class.
     
     private let gameLevelKey = "GameLevelKey"
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -22,8 +21,7 @@ class GameStatsModel: BaseModel {
     override private init() {
         gameLevel = max(1, defaults.integerForKey(gameLevelKey))
         #if DEBUG
-            gameOffset = (Int(arc4random_uniform(UInt32(1000))) % 10)
-            gameLevel = 8
+        //    gameOffset = (Int(arc4random_uniform(UInt32(1000))) % 10)
         #endif
     }
     

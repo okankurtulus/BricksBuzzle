@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
 
@@ -18,6 +19,11 @@ class GameViewController: UIViewController {
     
     @IBOutlet var previousLevelButton : UIButton?
     @IBOutlet var nextLevelButton : UIButton?
+    @IBOutlet var shareButton : UIButton?
+    
+    @IBOutlet var bannerView: GADBannerView!
+    var isBannerBottomInited : Bool = false
+    var interstitial: GADInterstitial!
     
     var score = 0
     
@@ -27,13 +33,19 @@ class GameViewController: UIViewController {
         self.levelLabel?.text = ""
         self.previousLevelButton?.hidden = true
         self.nextLevelButton?.hidden = true
+        self.shareButton?.hidden = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         initGameScene()
-        let gameScene = skView.scene as! GameScene
         refreshLevel()
+        
+        self.initBanner()
+        if(interstitial == nil || !interstitial.isReady) {
+            self.initInterstitial()
+        }
+        
     }
     
     override func shouldAutorotate() -> Bool {
@@ -58,14 +70,11 @@ class GameViewController: UIViewController {
     }
     
     func initGameScene() {
-        
-        //if let scene = GameScene(fileNamed:"GameScene") {
-        
         if let scene : GameScene = GameScene(size: skView.frame.size) {
-            
-            skView.showsFPS = true
-            //skView.showsNodeCount = true
-            //skView.showsPhysics = true // Creates memory leak, so be carefull while open!
+            #if DEBUG
+                skView.showsFPS = true
+                skView.showsPhysics = true // Creates memory leak, so be carefull while open!
+            #endif
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -76,6 +85,14 @@ class GameViewController: UIViewController {
             scene.backgroundColor = UIColor.blackColor()
             skView.presentScene(scene)
         }
+    }
+    
+    @IBAction func share(sender : UIButton) {
+        print("share app")
+        let currentLevel = GameStatsModel.sharedInstance.gameLevel
+        let urlText = iRate.sharedInstance().ratingsURL.absoluteString
+        let shareText = "This app is amazing and I'm already level \(currentLevel)! Download and try it!\n\(urlText)"
+        BDGShare.sharedBDGShare().shareUsingActivityController(shareText, urlStr: urlText)
     }
     
     @IBAction func help(sender : UIButton) {
@@ -100,8 +117,8 @@ class GameViewController: UIViewController {
         let offset = GameStatsModel.sharedInstance.gameOffset
         let level = GameStatsModel.sharedInstance.gameLevel
         nextLevelButton?.hidden = offset == 0
+        shareButton?.hidden = !(nextLevelButton!.hidden) || level < 2
         previousLevelButton?.hidden = level + offset == 1
-        
     }
     
     func refreshLevel() {
@@ -188,4 +205,55 @@ extension GameViewController {
                 view.hidden = false
         })
     }
+}
+
+
+//MARK: - Google Ads
+extension GameViewController {
+    
+    func initBanner()  {
+        #if DEBUG
+            let bannerId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_BANNER_TEST)
+        #else
+            let bannerId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_BANNER)
+        #endif
+        
+        bannerView.adUnitID = bannerId
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.loadRequest(GADRequest())
+    }
+    
+    func initInterstitial() {
+        #if DEBUG
+            let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL_TEST)
+        #else
+            let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL)
+        #endif
+        interstitial = GADInterstitial(adUnitID: interstitialId)
+        interstitial.delegate = self
+        let request = GADRequest()
+        interstitial.loadRequest(request)
+    }
+}
+
+//MARK: - Banner Ad delegate
+extension GameViewController : GADBannerViewDelegate {
+    func adViewDidReceiveAd(bannerView: GADBannerView!) {
+        isBannerBottomInited = true
+    }
+}
+
+//MARK: - Interstitial Ad delegate
+extension GameViewController : GADInterstitialDelegate {
+    func interstitialWillPresentScreen(ad: GADInterstitial!) {
+    }
+    
+    func interstitialDidDismissScreen(ad: GADInterstitial!) {
+        initInterstitial()
+    }
+    
+    func interstitialDidFailToPresentScreen(ad: GADInterstitial!) {
+    }
+    
 }

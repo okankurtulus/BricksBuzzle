@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3174FE52D262E48FF05FE6B7 /* Pods_Click_BrickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4671F67474A2D2557C50FE49 /* Pods_Click_BrickUITests.framework */; };
+		368C7AF69C0CA6E1409A9862 /* Pods_Click_Brick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2957F1A1828B9AB37ACCF4 /* Pods_Click_Brick.framework */; };
 		B118F68D1D6343480058D9FF /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B118F68C1D6343480058D9FF /* success.mp3 */; };
 		B1607F541D63964B00E0263B /* GameStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1607F531D63964B00E0263B /* GameStatsModel.swift */; };
 		B187FA121D63459A00234AA5 /* fit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B187FA111D63459A00234AA5 /* fit.mp3 */; };
@@ -22,6 +24,8 @@
 		B1B4DB2C1D547E7700420A47 /* BrickNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B4DB2B1D547E7700420A47 /* BrickNode.swift */; };
 		B1D3A99E1D61ECC300AAA781 /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1D3A99D1D61ECC300AAA781 /* applause.mp3 */; };
 		B1DE7B541D65E06800B81E1B /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1DE7B531D65E06800B81E1B /* fail.mp3 */; };
+		B1DE7B6F1D65F0C300B81E1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1DE7B6E1D65F0C300B81E1B /* GoogleService-Info.plist */; };
+		B1DE7B711D65F19D00B81E1B /* GoogleServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DE7B701D65F19D00B81E1B /* GoogleServiceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C15612AF1A56AEF5A787042 /* Pods-Click BrickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Click BrickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Click BrickUITests/Pods-Click BrickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		346CA54493A8B752CF46A69F /* Pods-Click Brick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Click Brick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Click Brick/Pods-Click Brick.debug.xcconfig"; sourceTree = "<group>"; };
+		4671F67474A2D2557C50FE49 /* Pods_Click_BrickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Click_BrickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B53A54295FBAA876D0E55E /* Pods-Click Brick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Click Brick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Click Brick/Pods-Click Brick.release.xcconfig"; sourceTree = "<group>"; };
+		86DB3FC78EA20C1998562BD5 /* Pods-Click BrickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Click BrickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Click BrickUITests/Pods-Click BrickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A2957F1A1828B9AB37ACCF4 /* Pods_Click_Brick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Click_Brick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B118F68C1D6343480058D9FF /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
 		B1607F531D63964B00E0263B /* GameStatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModel.swift; sourceTree = "<group>"; };
 		B187FA111D63459A00234AA5 /* fit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fit.mp3; sourceTree = "<group>"; };
@@ -54,6 +64,10 @@
 		B1B4DB2B1D547E7700420A47 /* BrickNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickNode.swift; sourceTree = "<group>"; };
 		B1D3A99D1D61ECC300AAA781 /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause.mp3; sourceTree = "<group>"; };
 		B1DE7B531D65E06800B81E1B /* fail.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fail.mp3; sourceTree = "<group>"; };
+		B1DE7B631D65E7F300B81E1B /* Click Brick-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Click Brick-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1DE7B6E1D65F0C300B81E1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B1DE7B701D65F19D00B81E1B /* GoogleServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleServiceModel.swift; sourceTree = "<group>"; };
+		B1FB87B91D65FFF6009C5D65 /* Click Brick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Click Brick.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368C7AF69C0CA6E1409A9862 /* Pods_Click_Brick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,15 +83,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3174FE52D262E48FF05FE6B7 /* Pods_Click_BrickUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25F6526D6ABE858794150BC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				346CA54493A8B752CF46A69F /* Pods-Click Brick.debug.xcconfig */,
+				76B53A54295FBAA876D0E55E /* Pods-Click Brick.release.xcconfig */,
+				86DB3FC78EA20C1998562BD5 /* Pods-Click BrickUITests.debug.xcconfig */,
+				1C15612AF1A56AEF5A787042 /* Pods-Click BrickUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B1B3212D1D5C5D4B00488D68 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1DE7B701D65F19D00B81E1B /* GoogleServiceModel.swift */,
 				B1607F531D63964B00E0263B /* GameStatsModel.swift */,
 				B1B3212E1D5C5D5B00488D68 /* ColorModel.swift */,
 				B1B321301D5C5D6E00488D68 /* BaseModel.swift */,
@@ -90,6 +118,8 @@
 				B1B4DB051D5478D300420A47 /* Click Brick */,
 				B1B4DB1E1D5478D400420A47 /* Click BrickUITests */,
 				B1B4DB041D5478D300420A47 /* Products */,
+				25F6526D6ABE858794150BC4 /* Pods */,
+				BD74EDF4E93419224115B2CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +135,7 @@
 		B1B4DB051D5478D300420A47 /* Click Brick */ = {
 			isa = PBXGroup;
 			children = (
+				B1FB87B91D65FFF6009C5D65 /* Click Brick.entitlements */,
 				B1F74FF91D61836F005423BE /* App */,
 				B1B3212D1D5C5D4B00488D68 /* Model */,
 				B1B4DB2A1D547E5D00420A47 /* SpriteNode */,
@@ -112,6 +143,7 @@
 				B1B4DB0C1D5478D400420A47 /* GameViewController.swift */,
 				B1B4DB0E1D5478D400420A47 /* Main.storyboard */,
 				B1B4DB161D5478D400420A47 /* Info.plist */,
+				B1DE7B6E1D65F0C300B81E1B /* GoogleService-Info.plist */,
 			);
 			path = "Click Brick";
 			sourceTree = "<group>";
@@ -133,13 +165,22 @@
 			name = SpriteNode;
 			sourceTree = "<group>";
 		};
+		B1DE7B671D65E89E00B81E1B /* BDGShare */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = BDGShare;
+			sourceTree = "<group>";
+		};
 		B1F74FF91D61836F005423BE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				B1DE7B671D65E89E00B81E1B /* BDGShare */,
 				B1F74FFA1D618861005423BE /* Sound */,
 				B1B4DB061D5478D400420A47 /* AppDelegate.swift */,
 				B1B4DB111D5478D400420A47 /* Assets.xcassets */,
 				B1B4DB131D5478D400420A47 /* LaunchScreen.storyboard */,
+				B1DE7B631D65E7F300B81E1B /* Click Brick-Bridging-Header.h */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -155,6 +196,15 @@
 			name = Sound;
 			sourceTree = "<group>";
 		};
+		BD74EDF4E93419224115B2CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A2957F1A1828B9AB37ACCF4 /* Pods_Click_Brick.framework */,
+				4671F67474A2D2557C50FE49 /* Pods_Click_BrickUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B4DB241D5478D400420A47 /* Build configuration list for PBXNativeTarget "Click Brick" */;
 			buildPhases = (
+				5721CCC448FC3510B581815C /* 📦 Check Pods Manifest.lock */,
 				B1B4DAFF1D5478D300420A47 /* Sources */,
 				B1B4DB001D5478D300420A47 /* Frameworks */,
 				B1B4DB011D5478D300420A47 /* Resources */,
+				7CE177B4929063D01E59187C /* 📦 Embed Pods Frameworks */,
+				A1599F4B5C1FF90A834AAEC8 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B4DB271D5478D400420A47 /* Build configuration list for PBXNativeTarget "Click BrickUITests" */;
 			buildPhases = (
+				869637838BCFF136525CEDF9 /* 📦 Check Pods Manifest.lock */,
 				B1B4DB171D5478D400420A47 /* Sources */,
 				B1B4DB181D5478D400420A47 /* Frameworks */,
 				B1B4DB191D5478D400420A47 /* Resources */,
+				3D6592E6E30E099AAA20B62A /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +261,11 @@
 					B1B4DB021D5478D300420A47 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8V9FEAB5WD;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+						};
 					};
 					B1B4DB1A1D5478D400420A47 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -239,6 +299,7 @@
 			files = (
 				B187FA121D63459A00234AA5 /* fit.mp3 in Resources */,
 				B1B4DB151D5478D400420A47 /* LaunchScreen.storyboard in Resources */,
+				B1DE7B6F1D65F0C300B81E1B /* GoogleService-Info.plist in Resources */,
 				B1DE7B541D65E06800B81E1B /* fail.mp3 in Resources */,
 				B1D3A99E1D61ECC300AAA781 /* applause.mp3 in Resources */,
 				B1B4DB121D5478D400420A47 /* Assets.xcassets in Resources */,
@@ -256,6 +317,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D6592E6E30E099AAA20B62A /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Click BrickUITests/Pods-Click BrickUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5721CCC448FC3510B581815C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7CE177B4929063D01E59187C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Click Brick/Pods-Click Brick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		869637838BCFF136525CEDF9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1599F4B5C1FF90A834AAEC8 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Click Brick/Pods-Click Brick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B1B4DAFF1D5478D300420A47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -263,6 +402,7 @@
 			files = (
 				B1B321311D5C5D6E00488D68 /* BaseModel.swift in Sources */,
 				B1607F541D63964B00E0263B /* GameStatsModel.swift in Sources */,
+				B1DE7B711D65F19D00B81E1B /* GoogleServiceModel.swift in Sources */,
 				B1B4DB0B1D5478D400420A47 /* GameScene.swift in Sources */,
 				B1B4DB0D1D5478D400420A47 /* GameViewController.swift in Sources */,
 				B1B4DB071D5478D400420A47 /* AppDelegate.swift in Sources */,
@@ -346,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,31 +536,41 @@
 		};
 		B1B4DB251D5478D400420A47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346CA54493A8B752CF46A69F /* Pods-Click Brick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Click Brick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "\"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okn.brick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Click Brick/Click Brick-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B1B4DB261D5478D400420A47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B53A54295FBAA876D0E55E /* Pods-Click Brick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Click Brick/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "\"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okn.brick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fbb9beb5-619c-458c-a319-3983b5cadd8e";
+				SWIFT_OBJC_BRIDGING_HEADER = "Click Brick/Click Brick-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		B1B4DB281D5478D400420A47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86DB3FC78EA20C1998562BD5 /* Pods-Click BrickUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Click BrickUITests/Info.plist";
@@ -433,6 +583,7 @@
 		};
 		B1B4DB291D5478D400420A47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C15612AF1A56AEF5A787042 /* Pods-Click BrickUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Click BrickUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

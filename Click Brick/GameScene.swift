@@ -20,9 +20,11 @@ protocol GameSceneHUDDelegate {
 
 class GameScene: SKScene {
     
-    var checkLevelCompete : Bool = false
     var isClearing = false
     var level : Int = 0
+    
+    let sequenceKey = "Sequence_Key"
+    let contactKey = "Contact_Key"
     
     let applauseAction = SKAction.playSoundFileNamed("applause.mp3", waitForCompletion: false)
     let successAction = SKAction.playSoundFileNamed("success.mp3", waitForCompletion: false)
@@ -31,16 +33,17 @@ class GameScene: SKScene {
     
     var hudDelegate: GameSceneHUDDelegate? = nil
     
+    var brickWidth : CGFloat = 0
+    var rowCount : Int = 0
+    
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         physicsWorld.contactDelegate = self
-        self.delegate = self
-
     }
     
     func fillBricks() {
-        self.scene?.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0),
-                                                toPoint: CGPointMake((self.scene?.size.width)!, 0))
+        self.scene?.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, -1), toPoint: CGPointMake((self.scene?.size.width)!, -1))
+        self.scene?.physicsBody?.dynamic = false
         
         self.level = GameStatsModel.sharedInstance.gameLevel + GameStatsModel.sharedInstance.gameOffset
         self.hudDelegate?.resetCounter(level)
@@ -49,7 +52,8 @@ class GameScene: SKScene {
         
         let width : CGFloat = size.width / CGFloat(columnCount)
         let height = width
-        let rowCount = Int( size.height / height) - 1
+        brickWidth = width
+        rowCount = Int( size.height / height) - 1
         
         let brickSize = CGSizeMake(width, height)
         let texture = SKTexture(imageNamed: "square_mask")
@@ -65,6 +69,7 @@ class GameScene: SKScene {
                 
                 brick.physicsBody?.categoryBitMask = EntityCategory.BrickNode
                 brick.physicsBody?.contactTestBitMask = EntityCategory.BrickNode
+                brick.physicsBody?.collisionBitMask = EntityCategory.BrickNode
                 
                 let locationX = CGFloat(i) * width + (width / 2)
                 let locationY = CGFloat(j) * height + (height / 2)
@@ -77,9 +82,8 @@ class GameScene: SKScene {
         }
     }
     
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
         for touch in touches {
             let location = touch.locationInNode(self)
             
@@ -92,8 +96,14 @@ class GameScene: SKScene {
                         brick.removeFromParent()
                         self.hudDelegate?.addPoints(-1)
                     }
-                    self.runAction(successAction)
-                    checkLevelCompete = true
+                    
+                    self.removeActionForKey(sequenceKey)
+                    let waitAction = SKAction.waitForDuration(1)
+                    let checkForCompletedAction = SKAction.runBlock({
+                        [unowned self] in
+                        self.checkIfCompleted()
+                    })
+                    self.runAction(SKAction.sequence([successAction, waitAction, checkForCompletedAction]), withKey: sequenceKey)
                 }
             }
             
@@ -179,6 +189,7 @@ class GameScene: SKScene {
                     node.removeFromParent()
                 } else {
                     node.physicsBody?.collisionBitMask = 0
+                    node.physicsBody?.contactTestBitMask = 0
                     node.physicsBody?.categoryBitMask = 0
                     node.runAction(SKAction.sequence([
                         SKAction.waitForDuration(1),
@@ -200,18 +211,42 @@ class GameScene: SKScene {
 
 extension GameScene : SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
-        if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode) {
+        if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode
+            && scene?.physicsBody != nil) {
             runAction(fitAction)
         }
     }
-}
-
-extension GameScene : SKSceneDelegate {
-    func didEvaluateActionsForScene(scene: SKScene) {
-        if(checkLevelCompete) {
-            checkLevelCompete = false
-            checkIfCompleted()
+    
+    func didEndContact(contact: SKPhysicsContact) {
+        if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode) {
+            self.removeActionForKey(contactKey)
+            let waitAction = SKAction.waitForDuration(0.2)
+            let checkForCompletedAction = SKAction.runBlock({
+                [unowned self] in
+                self.checkToFixLocations()
+                })
+            self.runAction(SKAction.sequence([waitAction, checkForCompletedAction]), withKey: contactKey)
         }
     }
     
+    func checkToFixLocations()  {
+        if(self.children.count > 0) {
+            print("checking to Fix Locations")
+            let width = brickWidth
+            let height = width
+            let maxHeight = CGFloat(rowCount) * height + height / 2
+            
+            for x in (width/2).stride(to: self.size.width, by: width) {
+                for y in (maxHeight).stride(to:  height/2 , by: -1*height) {
+                    let point = CGPointMake(x, y)
+                    if let brickCandidate = self.nodesAtPoint(point).filter({(node : SKNode) in return node is BrickNode }).first as? BrickNode {
+                        if(brickCandidate.physicsBody!.dynamic) {
+                            brickCandidate.position = point
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
 }

@@ -1,0 +1,996 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CBCC11AFEC39AE34CF22778C05A0C30 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D18E6EBB7F417FBA31E80EFA93F8A5E9 /* iRate.bundle */; };
+		2331E295EBAC233F28B0E763533C1EED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CA11A1DE0798D07EE63632DF19CF51 /* Foundation.framework */; };
+		2813EC793C3A7658A314B50C0D736480 /* BDGShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F39121203D7D436A3F680B48A054E2 /* BDGShare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		344A8185B4DF5C95690DF304149C2EEB /* Pods-Click Brick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5836AEA22AEE65E7BCCA9DBA76DDBA2 /* Pods-Click Brick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		390A8863AE159A26A5744AFD4D272C1B /* iRate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47AE1EC003F68E9171726FEE60D3DA16 /* iRate-dummy.m */; };
+		3B0BC087FEF77A4ACC7ABA82BE33FD1A /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC6C10F97DB26E501783FE4492905F1 /* iRate.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		42D52FD11C172750DA2A7183DAB3762E /* iRate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21940B62EBBEB39C2E8F2099E8DC29C2 /* iRate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		496581917F6D0C78EA05E043D0AFBD33 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC66AE33E3A2BCDEA6947CAED60980EC /* MessageUI.framework */; };
+		79E91FEDDC53B5B0666CCC07C25FB984 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B48301904A1CC669192F7174D7B7B27 /* Social.framework */; };
+		9B6BC4FC8297C995656590FDCD601A38 /* Pods-Click Brick-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCDA78ACB50A1C1EE1EF8415862A143 /* Pods-Click Brick-dummy.m */; };
+		B9C3644F40144F0CF39432AAD459087C /* Pods-Click BrickUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53539270343C906C5794ED15AFF62E80 /* Pods-Click BrickUITests-dummy.m */; };
+		BDFAB222CE5AEC9EB69D0F6EFF62D212 /* iRate.h in Headers */ = {isa = PBXBuildFile; fileRef = 90AA213473839B459B96271CF93D5806 /* iRate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8F2B31F2A80EBF9066A55F41D0311A8 /* BDGShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 040BE3E5A09152ED848E7BD15E1E4F0E /* BDGShare.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D1E1A0CF1711B69EE6E5C35068DF7481 /* Pods-Click BrickUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1238B80B28FD1E4C8ACF1192ADCEE975 /* Pods-Click BrickUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF6724A5F11CAB3E135F70C409125DBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CA11A1DE0798D07EE63632DF19CF51 /* Foundation.framework */; };
+		E1EBCED81B647B2F2BD3E733186CDF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CA11A1DE0798D07EE63632DF19CF51 /* Foundation.framework */; };
+		E6E5D070452FFF25F4BA5CAB890AB4FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CA11A1DE0798D07EE63632DF19CF51 /* Foundation.framework */; };
+		E842CF73E40ECE637A2B954D7F85080A /* BDGShare-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CF235F444D42BB49DD0DA6D16A5C7D /* BDGShare-dummy.m */; };
+		EC1C511D33A805130ECA06700E68A8E9 /* BDGShare-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2ECD17CD571F2F9FF656EF6DE58D25A /* BDGShare-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		336D28ED1B9CFDB0CADEA09A589E32B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFDC7944A50094C37C264D95A9B63544;
+			remoteInfo = BDGShare;
+		};
+		43712E667388C62B4B0978ED1C9F71B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00E74CED770597EF76DEE6FE824D1B7A;
+			remoteInfo = iRate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		040BE3E5A09152ED848E7BD15E1E4F0E /* BDGShare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BDGShare.m; sourceTree = "<group>"; };
+		0EDD4FCAC922089953DCE0BC4E79CC23 /* Pods-Click BrickUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Click BrickUITests-frameworks.sh"; sourceTree = "<group>"; };
+		0F56AA94139582D3A9D429A575D9801C /* Pods_Click_Brick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Click_Brick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1238B80B28FD1E4C8ACF1192ADCEE975 /* Pods-Click BrickUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Click BrickUITests-umbrella.h"; sourceTree = "<group>"; };
+		16CF235F444D42BB49DD0DA6D16A5C7D /* BDGShare-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BDGShare-dummy.m"; sourceTree = "<group>"; };
+		21940B62EBBEB39C2E8F2099E8DC29C2 /* iRate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iRate-umbrella.h"; sourceTree = "<group>"; };
+		25DF7902EB1F9D006DFD620211AE00AA /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		276F24961B4EE7BE0A5518F1F3B4CDBE /* BDGShare-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDGShare-prefix.pch"; sourceTree = "<group>"; };
+		28ED70EB459CE69AB7801826E4F4ADC2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		384E87146407D081085EB497ADC9AE86 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		3A9F37E35D826DE171E691F37C4ED4EA /* iRate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iRate.xcconfig; sourceTree = "<group>"; };
+		3AA6D3FC67C51FFF65ACE8DBFEF2069B /* Pods-Click Brick-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Click Brick-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46F39121203D7D436A3F680B48A054E2 /* BDGShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BDGShare.h; sourceTree = "<group>"; };
+		47AE1EC003F68E9171726FEE60D3DA16 /* iRate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iRate-dummy.m"; sourceTree = "<group>"; };
+		53539270343C906C5794ED15AFF62E80 /* Pods-Click BrickUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Click BrickUITests-dummy.m"; sourceTree = "<group>"; };
+		60CD889F6E428789E5D1692D78E35A1C /* iRate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iRate.modulemap; sourceTree = "<group>"; };
+		6282B0D65C247C21FD47C26804D094DD /* Pods-Click Brick-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Click Brick-frameworks.sh"; sourceTree = "<group>"; };
+		64F8FFCF434919633DCF3263EE870114 /* Pods-Click Brick-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Click Brick-acknowledgements.plist"; sourceTree = "<group>"; };
+		6555A441CAE89DD86E50E52A163F6CAD /* Pods_Click_BrickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Click_BrickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		659021D74C63CD8F1C6B4E9E0BA4C703 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		679468547ECE5703E786AA5756C19C30 /* iRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5825D587B81A815AD204188FB85AE6 /* Pods-Click BrickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Click BrickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B9BC7BB7DE8993700FBFDCC71E47380 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		6E93C938B9735E257ADA22662266FC24 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		74000C55FB63DD510D601E494F88B5B9 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		77F8E2522153A99E03209B446B468344 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		799867A90E5D720E695B3934C4F095BF /* BDGShare.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BDGShare.modulemap; sourceTree = "<group>"; };
+		7DCDA78ACB50A1C1EE1EF8415862A143 /* Pods-Click Brick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Click Brick-dummy.m"; sourceTree = "<group>"; };
+		7E2488F17DF42444EF8D29FB6F21B3B7 /* Pods-Click BrickUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Click BrickUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8DC2C2598A6DCA795648D30092243DBE /* Pods-Click Brick-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Click Brick-resources.sh"; sourceTree = "<group>"; };
+		90AA213473839B459B96271CF93D5806 /* iRate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = iRate/iRate.h; sourceTree = "<group>"; };
+		91ED9E1D8764159354ADD2D53F706C56 /* Pods-Click BrickUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Click BrickUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B20E2C01A0106D2A06C839CC2747A2D /* Pods-Click BrickUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Click BrickUITests.modulemap"; sourceTree = "<group>"; };
+		9B48301904A1CC669192F7174D7B7B27 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		9C3CB00C546BF542D20FF3B5056FD280 /* Pods-Click BrickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Click BrickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C458751C93500F26E16C3B25B0215F8 /* Pods-Click BrickUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Click BrickUITests-resources.sh"; sourceTree = "<group>"; };
+		9FB0C8E8DB51738EDFFECD8F929278AC /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		A51D7E4A1E10388547E42E9EBE374B56 /* Pods-Click Brick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Click Brick.modulemap"; sourceTree = "<group>"; };
+		A5836AEA22AEE65E7BCCA9DBA76DDBA2 /* Pods-Click Brick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Click Brick-umbrella.h"; sourceTree = "<group>"; };
+		A66A5294514EF399D9C09FC67288697F /* Pods-Click Brick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Click Brick.debug.xcconfig"; sourceTree = "<group>"; };
+		B0CA11A1DE0798D07EE63632DF19CF51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B2ECD17CD571F2F9FF656EF6DE58D25A /* BDGShare-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDGShare-umbrella.h"; sourceTree = "<group>"; };
+		B8514CC7BEDC2CBB7C55C449B23FA4A7 /* BDGShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BDGShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C03BF239868FDEE73FBF465035C54173 /* Pods-Click Brick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Click Brick.release.xcconfig"; sourceTree = "<group>"; };
+		C787A277C6ED5E646F9D125EA1BB0795 /* iRate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iRate-prefix.pch"; sourceTree = "<group>"; };
+		C9C9A6C4BDE635B1BA33F96F8713393C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC93EECF5180845E41548681DA78A73 /* BDGShare.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BDGShare.xcconfig; sourceTree = "<group>"; };
+		D18E6EBB7F417FBA31E80EFA93F8A5E9 /* iRate.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = iRate/iRate.bundle; sourceTree = "<group>"; };
+		DBC6C10F97DB26E501783FE4492905F1 /* iRate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = iRate/iRate.m; sourceTree = "<group>"; };
+		DC42BF43842AA9287EA452B8FBC583C0 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		F7DB6BC1F706BD02874847B58754DC86 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC66AE33E3A2BCDEA6947CAED60980EC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2481411591C22442252AFE527999670A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E5D070452FFF25F4BA5CAB890AB4FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8087299F128508AE80CA41DBC2E96A13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2331E295EBAC233F28B0E763533C1EED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3BEAED5DD63BBC27C6CD91BA96F757A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF6724A5F11CAB3E135F70C409125DBA /* Foundation.framework in Frameworks */,
+				496581917F6D0C78EA05E043D0AFBD33 /* MessageUI.framework in Frameworks */,
+				79E91FEDDC53B5B0666CCC07C25FB984 /* Social.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E536086B06D5186C814CE2FBB07E6FC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1EBCED81B647B2F2BD3E733186CDF97 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E82E3E12A5DE0BA8CF2A9B43BF1B7D /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				9FB0C8E8DB51738EDFFECD8F929278AC /* FIRInstanceID.h */,
+				4EB99ECE0A95978426466C2924BE9E44 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F679B8916224134DD815AC167F5BC20 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ED305B066C38970E5C470105C07C596 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F8FD8E0B2ADC67BAA91184F1CC5766E9 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		21FEA09EE91F7556AE70A8613652525E /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				38ED95DBD2682D7EBE415770F105C116 /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		22F7A66BAB31CCFFB0003580F8CD76E5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				799867A90E5D720E695B3934C4F095BF /* BDGShare.modulemap */,
+				CBC93EECF5180845E41548681DA78A73 /* BDGShare.xcconfig */,
+				16CF235F444D42BB49DD0DA6D16A5C7D /* BDGShare-dummy.m */,
+				276F24961B4EE7BE0A5518F1F3B4CDBE /* BDGShare-prefix.pch */,
+				B2ECD17CD571F2F9FF656EF6DE58D25A /* BDGShare-umbrella.h */,
+				28ED70EB459CE69AB7801826E4F4ADC2 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BDGShare";
+			sourceTree = "<group>";
+		};
+		36E961062486A0B63B24CE891585BDC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25DF7902EB1F9D006DFD620211AE00AA /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38ED95DBD2682D7EBE415770F105C116 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B9BC7BB7DE8993700FBFDCC71E47380 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EB99ECE0A95978426466C2924BE9E44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74000C55FB63DD510D601E494F88B5B9 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55F75DAC65D452D234FFC25BE772AA6D /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				90AA213473839B459B96271CF93D5806 /* iRate.h */,
+				DBC6C10F97DB26E501783FE4492905F1 /* iRate.m */,
+				5B1378584B258032C4074C8656E75939 /* Resources */,
+				5A06E0FE40D0AA246FCD174651234796 /* Support Files */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
+		56EA971BFC993B0E0925F52DAE567FD2 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8E736B6A18CBC9926EE244B05BFCFB2 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		5A06E0FE40D0AA246FCD174651234796 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7DB6BC1F706BD02874847B58754DC86 /* Info.plist */,
+				60CD889F6E428789E5D1692D78E35A1C /* iRate.modulemap */,
+				3A9F37E35D826DE171E691F37C4ED4EA /* iRate.xcconfig */,
+				47AE1EC003F68E9171726FEE60D3DA16 /* iRate-dummy.m */,
+				C787A277C6ED5E646F9D125EA1BB0795 /* iRate-prefix.pch */,
+				21940B62EBBEB39C2E8F2099E8DC29C2 /* iRate-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iRate";
+			sourceTree = "<group>";
+		};
+		5B1378584B258032C4074C8656E75939 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D18E6EBB7F417FBA31E80EFA93F8A5E9 /* iRate.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5F679B8916224134DD815AC167F5BC20 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B0CA11A1DE0798D07EE63632DF19CF51 /* Foundation.framework */,
+				FC66AE33E3A2BCDEA6947CAED60980EC /* MessageUI.framework */,
+				9B48301904A1CC669192F7174D7B7B27 /* Social.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				8A57685DCB0F102331954664DE144BC3 /* Pods */,
+				BDD9ECE9B451726587EE50AA2DC926BE /* Products */,
+				FEB9DAE858F2F054CDFD1296B7BFCE5A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8A57685DCB0F102331954664DE144BC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4A66C5A8D4E522A089ABE350A9FCFD6 /* BDGShare */,
+				1ED305B066C38970E5C470105C07C596 /* Firebase */,
+				B98AC49CF39842CC5AC4B3267D840D23 /* FirebaseAnalytics */,
+				00E82E3E12A5DE0BA8CF2A9B43BF1B7D /* FirebaseInstanceID */,
+				A98F4151F7FF78619A8B81E05B42F5CC /* Google-Mobile-Ads-SDK */,
+				D836074C23978C49DDA81B68879A5E1D /* GoogleInterchangeUtilities */,
+				21FEA09EE91F7556AE70A8613652525E /* GoogleSymbolUtilities */,
+				56EA971BFC993B0E0925F52DAE567FD2 /* GoogleUtilities */,
+				55F75DAC65D452D234FFC25BE772AA6D /* iRate */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A315B06DF6775896F2CAC999D898BF4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				659021D74C63CD8F1C6B4E9E0BA4C703 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A98F4151F7FF78619A8B81E05B42F5CC /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				36E961062486A0B63B24CE891585BDC3 /* Frameworks */,
+			);
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		B8E736B6A18CBC9926EE244B05BFCFB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E93C938B9735E257ADA22662266FC24 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B98AC49CF39842CC5AC4B3267D840D23 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				D62FC65D169E1A1DE53E57351FF880CE /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		BDD9ECE9B451726587EE50AA2DC926BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8514CC7BEDC2CBB7C55C449B23FA4A7 /* BDGShare.framework */,
+				679468547ECE5703E786AA5756C19C30 /* iRate.framework */,
+				0F56AA94139582D3A9D429A575D9801C /* Pods_Click_Brick.framework */,
+				6555A441CAE89DD86E50E52A163F6CAD /* Pods_Click_BrickUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5659E0941852A867659A4C4C3AFBAA8 /* Pods-Click BrickUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C9A6C4BDE635B1BA33F96F8713393C /* Info.plist */,
+				9B20E2C01A0106D2A06C839CC2747A2D /* Pods-Click BrickUITests.modulemap */,
+				7E2488F17DF42444EF8D29FB6F21B3B7 /* Pods-Click BrickUITests-acknowledgements.markdown */,
+				91ED9E1D8764159354ADD2D53F706C56 /* Pods-Click BrickUITests-acknowledgements.plist */,
+				53539270343C906C5794ED15AFF62E80 /* Pods-Click BrickUITests-dummy.m */,
+				0EDD4FCAC922089953DCE0BC4E79CC23 /* Pods-Click BrickUITests-frameworks.sh */,
+				9C458751C93500F26E16C3B25B0215F8 /* Pods-Click BrickUITests-resources.sh */,
+				1238B80B28FD1E4C8ACF1192ADCEE975 /* Pods-Click BrickUITests-umbrella.h */,
+				9C3CB00C546BF542D20FF3B5056FD280 /* Pods-Click BrickUITests.debug.xcconfig */,
+				6A5825D587B81A815AD204188FB85AE6 /* Pods-Click BrickUITests.release.xcconfig */,
+			);
+			name = "Pods-Click BrickUITests";
+			path = "Target Support Files/Pods-Click BrickUITests";
+			sourceTree = "<group>";
+		};
+		D62FC65D169E1A1DE53E57351FF880CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				384E87146407D081085EB497ADC9AE86 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D836074C23978C49DDA81B68879A5E1D /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				A315B06DF6775896F2CAC999D898BF4B /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		F36DCF64D4154E0CEB97C971C13AF241 /* Pods-Click Brick */ = {
+			isa = PBXGroup;
+			children = (
+				77F8E2522153A99E03209B446B468344 /* Info.plist */,
+				A51D7E4A1E10388547E42E9EBE374B56 /* Pods-Click Brick.modulemap */,
+				3AA6D3FC67C51FFF65ACE8DBFEF2069B /* Pods-Click Brick-acknowledgements.markdown */,
+				64F8FFCF434919633DCF3263EE870114 /* Pods-Click Brick-acknowledgements.plist */,
+				7DCDA78ACB50A1C1EE1EF8415862A143 /* Pods-Click Brick-dummy.m */,
+				6282B0D65C247C21FD47C26804D094DD /* Pods-Click Brick-frameworks.sh */,
+				8DC2C2598A6DCA795648D30092243DBE /* Pods-Click Brick-resources.sh */,
+				A5836AEA22AEE65E7BCCA9DBA76DDBA2 /* Pods-Click Brick-umbrella.h */,
+				A66A5294514EF399D9C09FC67288697F /* Pods-Click Brick.debug.xcconfig */,
+				C03BF239868FDEE73FBF465035C54173 /* Pods-Click Brick.release.xcconfig */,
+			);
+			name = "Pods-Click Brick";
+			path = "Target Support Files/Pods-Click Brick";
+			sourceTree = "<group>";
+		};
+		F4A66C5A8D4E522A089ABE350A9FCFD6 /* BDGShare */ = {
+			isa = PBXGroup;
+			children = (
+				46F39121203D7D436A3F680B48A054E2 /* BDGShare.h */,
+				040BE3E5A09152ED848E7BD15E1E4F0E /* BDGShare.m */,
+				22F7A66BAB31CCFFB0003580F8CD76E5 /* Support Files */,
+			);
+			path = BDGShare;
+			sourceTree = "<group>";
+		};
+		F8FD8E0B2ADC67BAA91184F1CC5766E9 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				DC42BF43842AA9287EA452B8FBC583C0 /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		FEB9DAE858F2F054CDFD1296B7BFCE5A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F36DCF64D4154E0CEB97C971C13AF241 /* Pods-Click Brick */,
+				D5659E0941852A867659A4C4C3AFBAA8 /* Pods-Click BrickUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B6756A34EAAB935927E24920F299C5E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1C511D33A805130ECA06700E68A8E9 /* BDGShare-umbrella.h in Headers */,
+				2813EC793C3A7658A314B50C0D736480 /* BDGShare.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E7FA1F90E1881DF086A7EA65960708 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D52FD11C172750DA2A7183DAB3762E /* iRate-umbrella.h in Headers */,
+				BDFAB222CE5AEC9EB69D0F6EFF62D212 /* iRate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF1F275B6C8AA8921F4026CE50DDBCB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				344A8185B4DF5C95690DF304149C2EEB /* Pods-Click Brick-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EF5260596F3EF7D74A5F20A0381B84 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E1A0CF1711B69EE6E5C35068DF7481 /* Pods-Click BrickUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00E74CED770597EF76DEE6FE824D1B7A /* iRate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE1D76D8FDEF2F3B0A024152D1829A0F /* Build configuration list for PBXNativeTarget "iRate" */;
+			buildPhases = (
+				3E004260E1C87BD14AA67E957083957B /* Sources */,
+				E536086B06D5186C814CE2FBB07E6FC4 /* Frameworks */,
+				D5E7FA1F90E1881DF086A7EA65960708 /* Headers */,
+				7C0FBB16A59F9F9A1B8AAEA878573753 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iRate;
+			productName = iRate;
+			productReference = 679468547ECE5703E786AA5756C19C30 /* iRate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4F0CE984D67A3A19D966FDCBB8353F03 /* Pods-Click Brick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 999A1D766804554F616AA837AC9AE801 /* Build configuration list for PBXNativeTarget "Pods-Click Brick" */;
+			buildPhases = (
+				488CDC7FD75E244194485E5A11067053 /* Sources */,
+				8087299F128508AE80CA41DBC2E96A13 /* Frameworks */,
+				DF1F275B6C8AA8921F4026CE50DDBCB0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				248B9712778BA0E85D58F99AE6F6B974 /* PBXTargetDependency */,
+				8B06684A1FB8E1D84C3A097F14A92600 /* PBXTargetDependency */,
+			);
+			name = "Pods-Click Brick";
+			productName = "Pods-Click Brick";
+			productReference = 0F56AA94139582D3A9D429A575D9801C /* Pods_Click_Brick.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8834405CF6A968C950A7586C03D0A8B2 /* Pods-Click BrickUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84514828CBC7FE9AB08E9A97E2BDB21A /* Build configuration list for PBXNativeTarget "Pods-Click BrickUITests" */;
+			buildPhases = (
+				802EE5C785B1F3DAA785D9A052D7B45A /* Sources */,
+				2481411591C22442252AFE527999670A /* Frameworks */,
+				E9EF5260596F3EF7D74A5F20A0381B84 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Click BrickUITests";
+			productName = "Pods-Click BrickUITests";
+			productReference = 6555A441CAE89DD86E50E52A163F6CAD /* Pods_Click_BrickUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFDC7944A50094C37C264D95A9B63544 /* BDGShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D141CA5686BC9DB35B2EE3FAAD026B2E /* Build configuration list for PBXNativeTarget "BDGShare" */;
+			buildPhases = (
+				4C31A769678EC654D9588809E78F6C65 /* Sources */,
+				A3BEAED5DD63BBC27C6CD91BA96F757A /* Frameworks */,
+				B6756A34EAAB935927E24920F299C5E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BDGShare;
+			productName = BDGShare;
+			productReference = B8514CC7BEDC2CBB7C55C449B23FA4A7 /* BDGShare.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BDD9ECE9B451726587EE50AA2DC926BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFDC7944A50094C37C264D95A9B63544 /* BDGShare */,
+				00E74CED770597EF76DEE6FE824D1B7A /* iRate */,
+				4F0CE984D67A3A19D966FDCBB8353F03 /* Pods-Click Brick */,
+				8834405CF6A968C950A7586C03D0A8B2 /* Pods-Click BrickUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7C0FBB16A59F9F9A1B8AAEA878573753 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBCC11AFEC39AE34CF22778C05A0C30 /* iRate.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E004260E1C87BD14AA67E957083957B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				390A8863AE159A26A5744AFD4D272C1B /* iRate-dummy.m in Sources */,
+				3B0BC087FEF77A4ACC7ABA82BE33FD1A /* iRate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		488CDC7FD75E244194485E5A11067053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B6BC4FC8297C995656590FDCD601A38 /* Pods-Click Brick-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C31A769678EC654D9588809E78F6C65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E842CF73E40ECE637A2B954D7F85080A /* BDGShare-dummy.m in Sources */,
+				C8F2B31F2A80EBF9066A55F41D0311A8 /* BDGShare.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		802EE5C785B1F3DAA785D9A052D7B45A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9C3644F40144F0CF39432AAD459087C /* Pods-Click BrickUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		248B9712778BA0E85D58F99AE6F6B974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BDGShare;
+			target = CFDC7944A50094C37C264D95A9B63544 /* BDGShare */;
+			targetProxy = 336D28ED1B9CFDB0CADEA09A589E32B0 /* PBXContainerItemProxy */;
+		};
+		8B06684A1FB8E1D84C3A097F14A92600 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iRate;
+			target = 00E74CED770597EF76DEE6FE824D1B7A /* iRate */;
+			targetProxy = 43712E667388C62B4B0978ED1C9F71B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2588EA364419D831347938453F4F6DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3B25D01B7EC48A87CCB5EB99147EFDD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9F37E35D826DE171E691F37C4ED4EA /* iRate.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iRate/iRate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iRate/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iRate/iRate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = iRate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C46E34A209815B587570A8303593AE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C3CB00C546BF542D20FF3B5056FD280 /* Pods-Click BrickUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Click BrickUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Click BrickUITests/Pods-Click BrickUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Click_BrickUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4CA1874BC6ECC1C1F3B09E77A20085F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5825D587B81A815AD204188FB85AE6 /* Pods-Click BrickUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Click BrickUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Click BrickUITests/Pods-Click BrickUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Click_BrickUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61AD4929AC3440F8BFA0595E8DCD90C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B71516F4791B3646897C651C99BC48E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9F37E35D826DE171E691F37C4ED4EA /* iRate.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iRate/iRate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iRate/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iRate/iRate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = iRate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C5586AA34B17CCA6C9B34F85A7CB4D75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC93EECF5180845E41548681DA78A73 /* BDGShare.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BDGShare/BDGShare-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BDGShare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BDGShare/BDGShare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BDGShare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DEA1F48903052E15ECE41251F11C6FF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A66A5294514EF399D9C09FC67288697F /* Pods-Click Brick.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Click Brick/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Click Brick/Pods-Click Brick.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Click_Brick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E006EB46B1F1B0626F216649BADEDB05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC93EECF5180845E41548681DA78A73 /* BDGShare.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BDGShare/BDGShare-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BDGShare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BDGShare/BDGShare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BDGShare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7915180292E8153E270DBF92E1FF696 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03BF239868FDEE73FBF465035C54173 /* Pods-Click Brick.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Click Brick/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Click Brick/Pods-Click Brick.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Click_Brick;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2588EA364419D831347938453F4F6DE5 /* Debug */,
+				61AD4929AC3440F8BFA0595E8DCD90C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84514828CBC7FE9AB08E9A97E2BDB21A /* Build configuration list for PBXNativeTarget "Pods-Click BrickUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C46E34A209815B587570A8303593AE6 /* Debug */,
+				4CA1874BC6ECC1C1F3B09E77A20085F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		999A1D766804554F616AA837AC9AE801 /* Build configuration list for PBXNativeTarget "Pods-Click Brick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA1F48903052E15ECE41251F11C6FF5 /* Debug */,
+				F7915180292E8153E270DBF92E1FF696 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE1D76D8FDEF2F3B0A024152D1829A0F /* Build configuration list for PBXNativeTarget "iRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71516F4791B3646897C651C99BC48E9 /* Debug */,
+				3B25D01B7EC48A87CCB5EB99147EFDD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D141CA5686BC9DB35B2EE3FAAD026B2E /* Build configuration list for PBXNativeTarget "BDGShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5586AA34B17CCA6C9B34F85A7CB4D75 /* Debug */,
+				E006EB46B1F1B0626F216649BADEDB05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
