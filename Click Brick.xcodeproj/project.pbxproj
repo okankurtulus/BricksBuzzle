@@ -26,6 +26,7 @@
 		B1DE7B541D65E06800B81E1B /* fail.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1DE7B531D65E06800B81E1B /* fail.mp3 */; };
 		B1DE7B6F1D65F0C300B81E1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1DE7B6E1D65F0C300B81E1B /* GoogleService-Info.plist */; };
 		B1DE7B711D65F19D00B81E1B /* GoogleServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DE7B701D65F19D00B81E1B /* GoogleServiceModel.swift */; };
+		B1EED7051D67857000679C8D /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EED7041D67857000679C8D /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		B1DE7B631D65E7F300B81E1B /* Click Brick-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Click Brick-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1DE7B6E1D65F0C300B81E1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1DE7B701D65F19D00B81E1B /* GoogleServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleServiceModel.swift; sourceTree = "<group>"; };
+		B1EED7041D67857000679C8D /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		B1FB87B91D65FFF6009C5D65 /* Click Brick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Click Brick.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B4DB1F1D5478D400420A47 /* Click_BrickUITests.swift */,
+				B1EED7041D67857000679C8D /* SnapshotHelper.swift */,
 				B1B4DB211D5478D400420A47 /* Info.plist */,
 			);
 			path = "Click BrickUITests";
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1B4DB201D5478D400420A47 /* Click_BrickUITests.swift in Sources */,
+				B1EED7051D67857000679C8D /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +490,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -526,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
