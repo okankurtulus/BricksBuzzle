@@ -16,8 +16,9 @@ class ColorModel: BaseModel {
                   UIColor.yellowColor(),
                   UIColor.greenColor(),
                   UIColor.blueColor(),
-                  UIColor.orangeColor(),
+                  UIColor.whiteColor(),                  
                   UIColor.magentaColor(),
+                  UIColor.orangeColor(),
                   UIColor.cyanColor(),
                   UIColor.brownColor(),
                   ]

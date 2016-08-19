@@ -220,9 +220,10 @@ extension GameScene : SKPhysicsContactDelegate {
     }
     
     func didEndContact(contact: SKPhysicsContact) {
-        if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode) {
+        if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode
+            && scene?.physicsBody != nil) {
             self.removeActionForKey(contactKey)
-            let waitAction = SKAction.waitForDuration(0.2)
+            let waitAction = SKAction.waitForDuration(0.3)
             let checkForCompletedAction = SKAction.runBlock({
                 [unowned self] in
                 self.checkToFixLocations()
