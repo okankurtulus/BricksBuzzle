@@ -20,6 +20,7 @@ protocol GameSceneHUDDelegate {
 
 class GameScene: SKScene {
     
+    var isCheckingToFixPositions = false
     var isClearing = false
     var level : Int = 0
     
@@ -212,7 +213,8 @@ class GameScene: SKScene {
 extension GameScene : SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         if (contact.bodyA.categoryBitMask == EntityCategory.BrickNode && contact.bodyB.categoryBitMask == EntityCategory.BrickNode
-            && scene?.physicsBody != nil) {
+            && scene?.physicsBody != nil
+            && !isCheckingToFixPositions) {
             runAction(fitAction)
         }
     }
@@ -232,6 +234,7 @@ extension GameScene : SKPhysicsContactDelegate {
     func checkToFixLocations()  {
         if(self.children.count > 0) {
             print("checking to Fix Locations")
+            isCheckingToFixPositions = true
             let width = brickWidth
             let height = width
             let maxHeight = CGFloat(rowCount) * height + height / 2
@@ -246,6 +249,13 @@ extension GameScene : SKPhysicsContactDelegate {
                     }
                 }
             }
+            
+            let waitAction = SKAction.waitForDuration(0.5)
+            let blockAction = SKAction.runBlock({
+                [unowned self] in
+                self.isCheckingToFixPositions = false
+                })
+            self.runAction(SKAction.sequence([waitAction, blockAction]))
         }
         
     }
