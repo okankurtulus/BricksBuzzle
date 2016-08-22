@@ -21,13 +21,17 @@ class GameStatsModel: BaseModel {
     override private init() {
         gameLevel = max(1, defaults.integerForKey(gameLevelKey))
         #if DEBUG
-            gameLevel = (Int(arc4random_uniform(UInt32(1000))) % 4)
+            gameLevel = (Int(arc4random_uniform(UInt32(1000))) % 4) + 1
         #endif
     }
     
     func nexLevel() {
-        gameLevel += 1
-        defaults.setObject(gameLevel, forKey: gameLevelKey)
-        defaults.synchronize()
+        if(gameOffset < 0) {
+            gameOffset += 1
+        } else {
+            gameLevel += 1
+            defaults.setObject(gameLevel, forKey: gameLevelKey)
+            defaults.synchronize()
+        }
     }
 }
