@@ -43,7 +43,7 @@ class GameScene: SKScene {
     }
     
     func fillBricks() {
-        self.scene?.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, -1), toPoint: CGPointMake((self.scene?.size.width)!, -1))
+        self.scene?.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0), toPoint: CGPointMake((self.scene?.size.width)!, 0))
         self.scene?.physicsBody?.dynamic = false
         
         self.level = GameStatsModel.sharedInstance.gameLevel + GameStatsModel.sharedInstance.gameOffset
@@ -59,8 +59,8 @@ class GameScene: SKScene {
         let brickSize = CGSizeMake(width, height)
         let texture = SKTexture(imageNamed: "square_mask")
         
-        for j in 0..<rowCount {
-            for i in 0..<columnCount {                
+        for i in 0..<columnCount {
+            for j in 0..<rowCount {
                 let color = ColorModel().randomColor(self.level + 1)
                 let brick = BrickNode(color: color, size: brickSize)
                 
