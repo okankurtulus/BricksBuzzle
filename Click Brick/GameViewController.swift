@@ -107,9 +107,12 @@ class GameViewController: UIViewController {
     @IBAction func share(sender : UIButton) {
         print("share app")
         let currentLevel = GameStatsModel.sharedInstance.gameLevel
-        let urlText = iRate.sharedInstance().ratingsURL.absoluteString
-        let shareText = "This app is amazing and I'm already level \(currentLevel)! Download and try it!\n\(urlText)"
-        BDGShare.sharedBDGShare().shareUsingActivityController(shareText, urlStr: urlText)
+        let appId = iRate.sharedInstance().appStoreID
+        let iTunesLink = "https://itunes.apple.com/us/app/apple-store/id\(appId)?mt=8";
+        var shareText = "This app is amazing and I'm already level \(currentLevel)! Download and try it!"
+        shareText.appendContentsOf("                                                                    ")
+        shareText.appendContentsOf(iTunesLink)
+        BDGShare.sharedBDGShare().shareUsingActivityController(shareText)
     }
     
     var resetButtonPressedTime = 0
