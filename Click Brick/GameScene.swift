@@ -129,7 +129,16 @@ class GameScene: SKScene {
             }
             let isCompleted = !isBrickExistsToExplode
             
-            if(isCompleted && remainingBrickCount == 0) {
+            
+            if(!isCompleted) {
+                //TODO : Consider to slide bricks to fill empty spaces
+                /*
+                let leftSlideNode = SKNode()
+                leftSlideNode.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0), toPoint: CGPointMake(0, (self.scene?.size.height)!))
+                self.addChild(leftSlideNode)
+                leftSlideNode.physicsBody?.applyImpulse(CGVectorMake(100000, 0))
+                */                
+            } else if(isCompleted && remainingBrickCount == 0) {
                 print("Finished with success")
                 self.hudDelegate?.nextLevel()
                 runAction(applauseAction)

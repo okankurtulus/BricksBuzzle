@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             iRate.sharedInstance().daysUntilPrompt = 0
             iRate.sharedInstance().usesUntilPrompt = 0
         #else
-            iRate.sharedInstance().daysUntilPrompt = 5
-            iRate.sharedInstance().usesUntilPrompt = 15
+            iRate.sharedInstance().daysUntilPrompt = 3
+            iRate.sharedInstance().usesUntilPrompt = 10
         #endif
     }
 
