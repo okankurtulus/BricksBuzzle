@@ -104,7 +104,7 @@ class GameScene: SKScene {
                         [unowned self] in
                         self.checkIfCompleted()
                     })
-                    self.runAction(SKAction.sequence([successAction, waitAction, checkForCompletedAction]), withKey: sequenceKey)
+                    self.runAction(SKAction.sequence([fitAction, waitAction, checkForCompletedAction]), withKey: sequenceKey)
                 }
             }
             
@@ -132,11 +132,19 @@ class GameScene: SKScene {
             
             if(!isCompleted) {
                 //TODO : Consider to slide bricks to fill empty spaces
+                print("now to slide :))");
+                
                 /*
-                let leftSlideNode = SKNode()
-                leftSlideNode.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0), toPoint: CGPointMake(0, (self.scene?.size.height)!))
-                self.addChild(leftSlideNode)
-                leftSlideNode.physicsBody?.applyImpulse(CGVectorMake(100000, 0))
+                 let leftSlideNode = SKNode()
+                 leftSlideNode.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointMake(0, 0), toPoint: CGPointMake(1, (self.scene?.size.height)!))
+                 leftSlideNode.physicsBody?.affectedByGravity = false
+                 leftSlideNode.physicsBody?.mass = 2
+                 leftSlideNode.physicsBody?.categoryBitMask = EntityCategory.BrickNode
+                 leftSlideNode.physicsBody?.collisionBitMask = EntityCategory.BrickNode
+                 leftSlideNode.physicsBody?.contactTestBitMask = EntityCategory.BrickNode
+                 
+                 self.scene?.addChild(leftSlideNode)
+                 leftSlideNode.runAction(SKAction.moveBy(CGVectorMake(30, 0), duration: 3))
                 */                
             } else if(isCompleted && remainingBrickCount == 0) {
                 print("Finished with success")

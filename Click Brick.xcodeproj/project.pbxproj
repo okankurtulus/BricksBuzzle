@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3174FE52D262E48FF05FE6B7 /* Pods_Click_BrickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4671F67474A2D2557C50FE49 /* Pods_Click_BrickUITests.framework */; };
 		368C7AF69C0CA6E1409A9862 /* Pods_Click_Brick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A2957F1A1828B9AB37ACCF4 /* Pods_Click_Brick.framework */; };
-		B118F68D1D6343480058D9FF /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B118F68C1D6343480058D9FF /* success.mp3 */; };
+		B12FD09F1D9CC52B001AE165 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B12FD09E1D9CC52B001AE165 /* success.mp3 */; };
 		B1607F541D63964B00E0263B /* GameStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1607F531D63964B00E0263B /* GameStatsModel.swift */; };
 		B187FA121D63459A00234AA5 /* fit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B187FA111D63459A00234AA5 /* fit.mp3 */; };
 		B1B3212F1D5C5D5B00488D68 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3212E1D5C5D5B00488D68 /* ColorModel.swift */; };
@@ -46,7 +46,7 @@
 		76B53A54295FBAA876D0E55E /* Pods-Click Brick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Click Brick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Click Brick/Pods-Click Brick.release.xcconfig"; sourceTree = "<group>"; };
 		86DB3FC78EA20C1998562BD5 /* Pods-Click BrickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Click BrickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Click BrickUITests/Pods-Click BrickUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A2957F1A1828B9AB37ACCF4 /* Pods_Click_Brick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Click_Brick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B118F68C1D6343480058D9FF /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		B12FD09E1D9CC52B001AE165 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
 		B1607F531D63964B00E0263B /* GameStatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatsModel.swift; sourceTree = "<group>"; };
 		B187FA111D63459A00234AA5 /* fit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fit.mp3; sourceTree = "<group>"; };
 		B1B3212E1D5C5D5B00488D68 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			children = (
 				B1DE7B531D65E06800B81E1B /* fail.mp3 */,
 				B187FA111D63459A00234AA5 /* fit.mp3 */,
-				B118F68C1D6343480058D9FF /* success.mp3 */,
+				B12FD09E1D9CC52B001AE165 /* success.mp3 */,
 				B1D3A99D1D61ECC300AAA781 /* applause.mp3 */,
 			);
 			name = Sound;
@@ -302,11 +302,11 @@
 			files = (
 				B187FA121D63459A00234AA5 /* fit.mp3 in Resources */,
 				B1B4DB151D5478D400420A47 /* LaunchScreen.storyboard in Resources */,
+				B12FD09F1D9CC52B001AE165 /* success.mp3 in Resources */,
 				B1DE7B6F1D65F0C300B81E1B /* GoogleService-Info.plist in Resources */,
 				B1DE7B541D65E06800B81E1B /* fail.mp3 in Resources */,
 				B1D3A99E1D61ECC300AAA781 /* applause.mp3 in Resources */,
 				B1B4DB121D5478D400420A47 /* Assets.xcassets in Resources */,
-				B118F68D1D6343480058D9FF /* success.mp3 in Resources */,
 				B1B4DB101D5478D400420A47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

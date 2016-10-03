@@ -14,20 +14,20 @@
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGK-Ox-yMo" customClass="SKView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_Level X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-04-1B3">
-                                        <rect key="frame" x="150" y="0.0" width="300" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="_Level X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-04-1B3">
+                                        <rect key="frame" x="81" y="0.0" width="160" height="40"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxV-wK-7xF">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRf-m4-Qqz">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
@@ -38,8 +38,8 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8y-nM-v7E">
-                                                <rect key="frame" x="138" y="8" width="25" height="25"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8y-nM-v7E">
+                                                <rect key="frame" x="92" y="8" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="o7P-5D-o02"/>
                                                     <constraint firstAttribute="height" constant="25" id="zRj-MQ-xGi"/>
@@ -61,10 +61,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5iq-91-rBU">
-                                        <rect key="frame" x="300" y="0.0" width="300" height="40"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXU-BH-H0v">
-                                                <rect key="frame" x="138" y="8" width="25" height="25"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXU-BH-H0v">
+                                                <rect key="frame" x="92" y="8" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="3Qd-cm-hjy"/>
                                                     <constraint firstAttribute="height" constant="25" id="qbI-Xf-LG4"/>
@@ -74,8 +74,8 @@
                                                     <action selector="nextLevel:" destination="BV1-FR-VrT" eventType="touchUpInside" id="wdU-pA-G5O"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-X7-Kki" userLabel="ShareButton">
-                                                <rect key="frame" x="130" y="0.0" width="40" height="40"/>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AB9-X7-Kki" userLabel="ShareButton">
+                                                <rect key="frame" x="61" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="AB9-X7-Kki" secondAttribute="height" multiplier="1:1" id="o39-4q-E1w"/>
                                                 </constraints>
@@ -85,7 +85,7 @@
                                                 </connections>
                                             </button>
                                             <button clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Gs3-jr-I3e" userLabel="Reload Button">
-                                                <rect key="frame" x="260" y="0.0" width="40" height="40"/>
+                                                <rect key="frame" x="120" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Gs3-jr-I3e" secondAttribute="height" multiplier="1:1" id="MVs-U3-5gA"/>
                                                     <constraint firstAttribute="width" secondItem="Gs3-jr-I3e" secondAttribute="height" multiplier="1:1" id="fRo-s7-YvO"/>
@@ -140,10 +140,11 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8k-NZ-REm" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="430" width="320" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Z8k-NZ-REm" secondAttribute="height" multiplier="12:1" id="E0n-Ql-rJG"/>
+                                    <constraint firstAttribute="width" secondItem="Z8k-NZ-REm" secondAttribute="height" multiplier="12:1" priority="750" id="E0n-Ql-rJG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="R3e-F7-JOY"/>
                                     <constraint firstAttribute="height" constant="50" id="bUe-mF-kJc"/>
                                 </constraints>
                                 <variation key="default">
@@ -164,6 +165,7 @@
                             <constraint firstItem="HGK-Ox-yMo" firstAttribute="top" secondItem="3se-qz-xqx" secondAttribute="top" id="gWb-r9-t4w"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bannerView" destination="Z8k-NZ-REm" id="Efp-7R-9Vu"/>
                         <outlet property="levelLabel" destination="OJd-04-1B3" id="NIi-Ou-nvA"/>

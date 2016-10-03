@@ -57,6 +57,10 @@ class GameViewController: UIViewController {
         refreshLevel()
         
         #if DEBUG
+            self.initBanner()
+            if(interstitial == nil || !interstitial.isReady) {
+                self.initInterstitial()
+            }
         #else
             self.initBanner()
             if(interstitial == nil || !interstitial.isReady) {
@@ -90,7 +94,7 @@ class GameViewController: UIViewController {
         if let scene : GameScene = GameScene(size: skView.frame.size) {
             #if DEBUG
                 //skView.showsFPS = true
-                //skView.showsPhysics = true // Creates memory leak, so be carefull while open!
+                skView.showsPhysics = true // Creates memory leak, so be carefull while open!
             #endif
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
@@ -120,8 +124,10 @@ class GameViewController: UIViewController {
         resetButtonPressedTime += 1
         rotate(sender)
         
-        if(resetButtonPressedTime % 15 == 0 && interstitial.isReady) {
-            interstitial.presentFromRootViewController(self)
+        if(resetButtonPressedTime % 2 == 0
+            && interstitial != nil
+            && interstitial!.isReady) {
+            interstitial!.presentFromRootViewController(self)
         } else {
             let gameScene = skView.scene as! GameScene
             gameScene.resetScene()
@@ -258,9 +264,9 @@ extension GameViewController {
             let interstitialId = GoogleServiceModel.sharedInstance.read(GoogleServiceKey.AD_UNIT_ID_FOR_INTERSTITIAL)
         #endif
         interstitial = GADInterstitial(adUnitID: interstitialId)
-        interstitial.delegate = self
+        interstitial!.delegate = self
         let request = GADRequest()
-        interstitial.loadRequest(request)
+        interstitial!.loadRequest(request)
     }
 }
 
